@@ -32,6 +32,17 @@ class Quiz extends React.Component {
           { text: '1803', id: 4 },
         ],
       },
+      {
+        question: 'Куда?',
+        rightAnswerId: 1,
+        id: 3,
+        answers: [
+          { text: 'MERN или MEAN + typeScrips', id: 1 },
+          { text: 'С++', id: 2 },
+          { text: 'Java', id: 3 },
+          { text: 'HTML', id: 4 },
+        ],
+      },
     ],
   }
 
@@ -83,6 +94,9 @@ class Quiz extends React.Component {
       isFinished: false,
       results: {},
     })
+  }
+  componentDidMount() {
+    console.log('Quiz ID =', this.props.match.params.id)
   }
   render() {
     return(
