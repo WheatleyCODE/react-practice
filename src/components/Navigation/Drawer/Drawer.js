@@ -4,7 +4,7 @@ import Backdrop from '../../UI/Backdrop/Backdrop'
 import s from './Drawer.module.css'
 
 const links = [
-  { to: '/', label: 'Список', exact: true, },
+  { to: '/', label: 'Пройти тест', exact: true, },
   { to: '/auth', label: 'Авторизация', exact: false, },
   { to: '/quiz-creator', label: 'Создать тест', exact: false, },
 ]

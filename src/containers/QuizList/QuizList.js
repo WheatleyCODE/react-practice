@@ -14,6 +14,7 @@ export default class QuizList extends React.Component {
       return (
         <li key={quiz.id}>
           <NavLink to={'/quiz/' + quiz.id}>
+            <i className="far fa-question-circle" />
             {quiz.name}
           </NavLink>
         </li>
@@ -28,7 +29,7 @@ export default class QuizList extends React.Component {
       Object.keys(response.data).forEach((key, index) => {
         quizes.push({
           id: key,
-          name: `Тест №${index + 1}`
+          name: `Пройти тест №${index + 1}`
         })
       })
       this.setState({

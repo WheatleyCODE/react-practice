@@ -142,15 +142,6 @@ export default class Auth extends React.Component {
         <div>
           <h1>Авторизация</h1>
           <form className={s.AuthForm} onSubmit={this.submitHandler}>
-            {/* <Input 
-              label="Email"
-              placeholder={'Введите почту'}
-            />
-            <Input
-              label="Password"
-              errorMessage="не рабит =["
-              placeholder={'Введите пароль'}
-            /> */}
             { this.renderInputs() }
             <Buttom disabled={!this.state.isFormFalid} type="success" onClick={this.loginHandler}>Войти</Buttom>
             <Buttom disabled={!this.state.isFormFalid} type="primary" onClick={this.registerHandler}>Регистрация</Buttom>

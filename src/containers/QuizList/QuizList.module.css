@@ -20,7 +20,13 @@
 .QuizList li a {
   text-decoration: none;
   color: #fff;
+  font-size: 20px;
+}
+.QuizList li a i {
+  font-size: 20px;
+  margin-right: 10px;
 }
 .QuizList li a:hover {
   color: #363f54;
+  text-decoration: underline;
 }
