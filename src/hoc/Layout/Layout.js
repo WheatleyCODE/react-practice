@@ -1,6 +1,6 @@
 import React from 'react'
-import MenuToggle from '../../components/Navigation/MenuToggle/MenuToggle'
-import Drawer from '../../components/Navigation/Drawer/Drawer'
+import MenuToggle from '../../components/Navigation/MenuToggle/MenuToggle' // тогл меню (кнопка бургер)
+import Drawer from '../../components/Navigation/Drawer/Drawer' // ПАнель меню
 import s from './Layout.module.css'
 import { connect } from 'react-redux'
 

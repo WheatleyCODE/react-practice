@@ -1,25 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
-import { compose, createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux';
-import rootReducer from './store/reducers/rootReducer';
-import thunk from 'redux-thunk'
+import React from 'react'; //  импорт реакта
+import ReactDOM from 'react-dom'; // импорт реакт дома
+import './index.css'; // стили
+import App from './App'; // компонент апп
+import reportWebVitals from './reportWebVitals'; //////////////////////
+import { BrowserRouter } from 'react-router-dom'; // роутинг
+import { compose, createStore, applyMiddleware } from 'redux' // модификации для редакса
+import { Provider } from 'react-redux'; // библиотека для свзяи редакса и реакта
+import rootReducer from './store/reducers/rootReducer'; // Все редьюсеры
+import thunk from 'redux-thunk' // Библиотека для асинхронных запрососв в редаксе 
 
+// Подлючение девтулса редакса
 const composeEnhancers =
   typeof window === 'object' &&
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
     }) : compose;
 
+// Редаксовский стор
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render( 
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={store}> {/* Закидываем в контекст наш редакс */}
       <BrowserRouter>
         <App />
       </BrowserRouter>
